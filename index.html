@@ -1,287 +1,240 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>PlanejaBem - Organização Financeira Inteligente</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Montserrat', Arial, sans-serif;
-      margin: 0;
-      background: #f8fafc;
-      color: #222;
-    }
-    header {
-      background: #092185;
-      color: #fff;
-      padding: 0;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.06);
-    }
-    .container {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    .logo-menu {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 22px 0 12px 0;
-    }
-    .logo-text {
-      font-size: 1.8em;
-      font-weight: 700;
-      letter-spacing: 1px;
-      color: #ffef66;
-      text-shadow: 0 1px 1px #00000030;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 24px;
-      font-size: 1.06em;
-      transition: color .2s;
-      font-weight: 500;
-    }
-    nav a:hover {
-      color: #ffe100;
-    }
-    /* HERO */
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      background: #e8f0fd;
-      border-radius: 16px;
-      margin-top: 30px;
-      padding: 12px 24px 24px 24px;
-    }
-    .hero-text {
-      flex: 1;
-      min-width: 280px;
-      margin-right: 18px;
-    }
-    .hero-text h1 {
-      font-size: 2.1em;
-      margin: 0 0 14px 0;
-      color: #092185;
-      font-weight: 700;
-    }
-    .hero-text p {
-      color: #34384a;
-      font-size: 1.18em;
-      margin-bottom: 18px;
-    }
-    .cta-btn {
-      background: #092185;
-      color: #fff;
-      padding: 15px 44px;
-      border: none;
-      border-radius: 28px;
-      font-size: 1.15em;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 10px #09218522;
-      transition: filter 0.2s, background 0.2s;
-    }
-    .cta-btn:hover {
-      filter: brightness(1.07);
-      background: #041259;
-    }
-    .hero-img {
-      flex: 1;
-      min-width: 200px;
-      max-width: 390px;
-      text-align: right;
-    }
-    .hero-img img {
-      width: 74%;
-      max-width: 290px;
-      border-radius: 32px;
-      box-shadow: 0 8px 28px #002b7535;
-    }
-    /* Beneficios */
-    .benefits {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 24px;
-      margin: 46px 0 24px 0;
-    }
-    .benefit-card {
-      background: #fff;
-      flex: 1 1 260px;
-      max-width: 320px;
-      border-radius: 16px;
-      box-shadow: 0 1px 10px #0001;
-      padding: 26px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .benefit-card img {
-      width: 64px;
-      margin-bottom: 14px;
-      filter: grayscale(0.1) brightness(1.03);
-    }
-    .benefit-title {
-      font-size: 1.12em;
-      font-weight: 600;
-      margin-bottom: 6px;
-      color: #092185;
-    }
-    .benefit-card p {
-      color: #5d6270;
-      font-size: 0.98em;
-      margin: 0;
-    }
-    /* Testemunhos */
-    .testimonials {
-      margin: 46px 0 8px 0;
-    }
-    .testimonials-title {
-      text-align: center;
-      color: #092185;
-      font-size: 1.25em;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-    .testimonials-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 22px;
-    }
-    .testimonial {
-      background: #fff;
-      flex: 1 1 220px;
-      max-width: 280px;
-      border-radius: 16px;
-      box-shadow: 0 2px 12px #0001;
-      padding: 20px 18px 18px 18px;
-      text-align: center;
-      margin-bottom: 18px;
-    }
-    .testimonial img {
-      width: 54px;
-      height: 54px;
-      border-radius: 99px;
-      margin-bottom: 8px;
-    }
-    .testimonial-name {
-      font-weight: 600;
-      color: #1a1e41;
-      font-size: 1em;
-      margin-top: 2px;
-    }
-    .testimonial-role {
-      color: #677;
-      font-size: 0.98em;
-      margin-bottom: 8px;
-    }
-    .testimonial p {
-      font-size: 0.99em;
-      color: #465;
-      margin-bottom: 0;
-      margin-top: 3px;
-    }
-    /* Rodapé */
-    footer {
-      background: #ecf1f7;
-      color: #707480;
-      padding: 28px;
-      text-align: center;
-      margin-top: 40px;
-      font-size: 0.98em;
-    }
-    @media (max-width: 900px) {
-      .hero { flex-direction: column; align-items: flex-start; }
-      .hero-img { text-align: center; width: 100%; margin-top: 18px; }
-      .hero-img img { width: 60%; min-width: 138px; }
-      .benefits { flex-direction: column; align-items: center; }
-      .benefit-card { max-width: 100%; }
-      .testimonials-list { flex-direction: column; align-items: center; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanejaBem - Sua Vida Financeira Simplificada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Configurações Globais --- */
+        :root {
+            --cor-primaria: #0D47A1; /* Azul escuro principal */
+            --cor-secundaria: #1976D2; /* Azul mais claro para hover */
+            --cor-fundo: #F8F9FA;
+            --cor-texto: #333;
+            --cor-texto-claro: #555;
+            --cor-branco: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Cabeçalho --- */
+        header {
+            background-color: var(--cor-branco);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            padding: 15px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--cor-primaria);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: var(--cor-texto-claro);
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--cor-primaria);
+        }
+
+        /* --- Seção Principal (Hero) --- */
+        .hero {
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3em;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span {
+            color: var(--cor-primaria);
+        }
+
+        .hero-text p {
+            font-size: 1.1em;
+            color: var(--cor-texto-claro);
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: var(--cor-primaria);
+            color: var(--cor-branco);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 15px rgba(13, 71, 161, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: var(--cor-secundaria);
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            width: 450px;
+            border-radius: 20px;
+        }
+
+        /* --- Seção de Funcionalidades --- */
+        .features {
+            padding: 80px 0;
+            background-color: var(--cor-branco);
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 60px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--cor-fundo);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #E0E0E0;
+        }
+        
+        .feature-card img {
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: var(--cor-texto-claro);
+        }
+        
+        /* --- Rodapé --- */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--cor-texto-claro);
+        }
+
+        /* --- Responsividade --- */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none; /* Simplificação para mobile */
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="container logo-menu">
-      <span class="logo-text">PlanejaBem</span>
-      <nav>
-        <a href="#">Início</a>
-        <a href="#">Funcionalidades</a>
-        <a href="#">Planos</a>
-        <a href="#">Contato</a>
-      </nav>
-    </div>
-  </header>
 
-  <div class="container">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Controle suas finanças pelo WhatsApp com IA</h1>
-        <p>Organize receitas, despesas e acompanhe relatórios inteligentes. Simples, rápido e seguro — você no comando do seu futuro financeiro!</p>
-        <button class="cta-btn">Comece Gratuitamente</button>
-      </div>
-      <div class="hero-img">
-        <img src="https://cdn.pixabay.com/photo/2020/04/23/11/41/finance-5087585_1280.png" alt="Gestão financeira" />
-      </div>
-    </section>
-
-    <!-- BENEFITS -->
-    <div class="benefits">
-      <div class="benefit-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3132/3132693.png" alt="Automação">
-        <div class="benefit-title">Automatize gastos via WhatsApp</div>
-        <p>Registre despesas e receitas por texto, áudio ou fotos. Muito mais prático que planilhas!</p>
-      </div>
-      <div class="benefit-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3523/3523887.png" alt="Gráficos">
-        <div class="benefit-title">Gráficos e relatórios interativos</div>
-        <p>Visualize saldos, categorias e relatórios mês a mês direto no sistema — tudo claro e bonito.</p>
-      </div>
-      <div class="benefit-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt="Lembretes">
-        <div class="benefit-title">Lembretes de vencimentos</div>
-        <p>Receba alertas automáticos no WhatsApp para nunca mais perder datas importantes.</p>
-      </div>
-    </div>
-
-    <!-- TESTIMONIALS -->
-    <section class="testimonials">
-      <div class="testimonials-title">O que nossos usuários dizem</div>
-      <div class="testimonials-list">
-        <div class="testimonial">
-          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jéssica">
-          <div class="testimonial-name">Jéssica Caroline</div>
-          <div class="testimonial-role">Empreendedora</div>
-          <p>O PlanejaBem mudou a forma como organizo meu dinheiro. Prático, rápido e realmente eficiente!</p>
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">PlanejaBem</a>
+            <nav class="nav-links">
+                <a href="#">Como Funciona</a>
+                <a href="#">Planos</a>
+                <a href="#">Contato</a>
+            </nav>
         </div>
-        <div class="testimonial">
-          <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Eduardo">
-          <div class="testimonial-name">Eduardo Alves</div>
-          <div class="testimonial-role">Estudante</div>
-          <p>Com o PlanejaBem, registro tudo no WhatsApp. Não esqueço mais de nada!</p>
-        </div>
-        <div class="testimonial">
-          <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Kesia">
-          <div class="testimonial-name">Kesia Bizerra</div>
-          <div class="testimonial-role">Advogada</div>
-          <p>Facilitou demais o controle dos meus gastos. Recomendo pra todo mundo!</p>
-        </div>
-      </div>
-    </section>
+    </header>
 
-  </div>
+    <main>
+        <section class="hero container">
+            <div class="hero-text">
+                <h1>A forma mais fácil de <span>organizar suas finanças</span></h1>
+                <p>Use o WhatsApp para registrar gastos, ver relatórios e atingir suas metas. Simples, inteligente e sempre à mão.</p>
+                <a href="#" class="cta-button">Comece Agora (é Grátis)</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.pexels.com/photos/7414036/pexels-photo-7414036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Pessoa utilizando smartphone para planejamento financeiro">
+            </div>
+        </section>
 
-  <footer>
-    &copy; 2024 PlanejaBem • Inspirado em GranaZen<br>
-    Santa Cruz do Sul, Brasil
-  </footer>
+        <section class="features">
+            <div class="container">
+                <h2>Controle total na palma da sua mão</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/889/889146.png" alt="Ícone de Chat">
+                        <h3>Registro por Chat</h3>
+                        <p>Envie uma mensagem e pronto. Sua despesa ou receita é registrada na hora, sem complicação.</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920349.png" alt="Ícone de Gráfico">
+                        <h3>Relatórios Visuais</h3>
+                        <p>Entenda para onde seu dinheiro vai com gráficos claros e relatórios mensais automáticos.</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3063/3063818.png" alt="Ícone de Alerta">
+                        <h3>Alertas Inteligentes</h3>
+                        <p>Seja avisado sobre contas a vencer e receba dicas para economizar com nossa IA.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 PlanejaBem. Feito para simplificar sua vida.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
