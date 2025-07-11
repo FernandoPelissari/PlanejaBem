@@ -1,108 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>PlanejaBem - Sua Solução em Planejamento!</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Montserrat', Arial, sans-serif;
-      margin: 0;
-      background: #f4f6f8;
-      color: #333;
-    }
-    header {
-      background: #004aad;
-      color: #fff;
-      padding: 32px 0 20px 0;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.6em;
-      margin: 0;
-      font-weight: 700;
-    }
-    nav {
-      margin-top: 16px;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 16px;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    nav a:hover {
-      color: #ffe100;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 14px rgba(0,0,0,0.07);
-      padding: 36px 24px;
-      text-align: center;
-    }
-    .botao {
-      background: #004aad;
-      color: #fff;
-      border: none;
-      padding: 16px 36px;
-      border-radius: 30px;
-      font-size: 1.2em;
-      font-weight: 600;
-      cursor: pointer;
-      margin-top: 28px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      transition: background 0.2s;
-    }
-    .botao:hover {
-      background: #012766;
-    }
-    .hero-image {
-      width: 210px;
-      margin: 42px auto 24px auto;
-      display: block;
-      opacity: .92;
-    }
-    footer {
-      text-align: center;
-      background: #eee;
-      padding: 20px;
-      font-size: 0.98em;
-      margin-top: 50px;
-      color: #657;
-    }
-    @media (max-width: 700px) {
-      main { padding: 18px 4vw; }
-      header { padding: 22px 0 10px 0; }
-      .hero-image { width: 130px; }
-    }
-  </style>
+  <title>PlanejaBem.app - Controle suas finanças pessoais</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <h1>PlanejaBem</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Sobre</a>
-      <a href="#">Serviços</a>
-      <a href="#">Contato</a>
-    </nav>
+    <div class="container">
+      <div class="logo">PlanejaBem<span>.app</span></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="funcionalidades.html">Funcionalidades</a>
+        <a href="blog.html">Blog</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
   </header>
-  <main>
-    <img class="hero-image" src="https://cdn.pixabay.com/photo/2017/02/21/08/51/plan-2084775_1280.png" alt="Planejamento">
-    <h2>Bem-vindo ao PlanejaBem!</h2>
-    <p>Sua solução moderna para <strong>planejamento financeiro</strong>, <strong>gestão de projetos</strong> e maximização de resultados. Vamos juntos transformar seus objetivos em realidade!</p>
-    <button class="botao">Saiba Mais</button>
-  </main>
+  
+  <section class="hero">
+    <div class="container">
+      <h1>Deixe seu futuro financeiro nas suas mãos</h1>
+      <p>Tenha todo o controle das suas finanças pessoais de forma simples, clara e eficiente.</p>
+      <a href="#" class="cta">Quero Planejar Agora</a>
+    </div>
+  </section>
+  
   <footer>
-    &copy; 2024 PlanejaBem. Todos os direitos reservados.<br/>
-    Santa Cruz do Sul, Brasil
+    <div class="container">
+      <p>&copy; 2024 PlanejaBem.app - Todos os direitos reservados.</p>
+    </div>
   </footer>
 </body>
 </html>
