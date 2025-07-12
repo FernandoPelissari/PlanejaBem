@@ -3,236 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlanejaBem - Sua Vida Financeira Simplificada</title>
+    <title>PlanejaBem - Controle Financeiro no WhatsApp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* --- Configurações Globais --- */
         :root {
-            --cor-primaria: #0D47A1; /* Azul escuro principal */
-            --cor-secundaria: #1976D2; /* Azul mais claro para hover */
-            --cor-fundo: #F8F9FA;
-            --cor-texto: #333;
-            --cor-texto-claro: #555;
-            --cor-branco: #FFFFFF;
+            --azul-principal: #3B82F6; /* Azul similar ao do GranaZen */
+            --azul-escuro: #1E3A8A;
+            --cinza-texto: #4B5563;
+            --cinza-fundo: #F9FAFB;
+            --branco: #FFFFFF;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
-            background-color: var(--cor-fundo);
-            color: var(--cor-texto);
+            background-color: var(--branco);
+            color: var(--cinza-texto);
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
         /* --- Cabeçalho --- */
         header {
-            background-color: var(--cor-branco);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            padding: 15px 0;
+            background-color: var(--branco);
+            border-bottom: 1px solid #E5E7EB;
+            padding: 16px 0;
         }
-
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         .logo {
-            font-size: 1.8em;
+            font-size: 1.75rem;
             font-weight: 700;
-            color: var(--cor-primaria);
-            text-decoration: none;
+            color: var(--azul-escuro);
         }
-
         .nav-links a {
-            color: var(--cor-texto-claro);
+            margin: 0 20px;
             text-decoration: none;
-            margin-left: 30px;
-            font-weight: 600;
-            transition: color 0.3s;
+            color: var(--cinza-texto);
+            font-weight: 500;
+            transition: color 0.2s;
         }
-
         .nav-links a:hover {
-            color: var(--cor-primaria);
+            color: var(--azul-principal);
         }
-
-        /* --- Seção Principal (Hero) --- */
-        .hero {
-            display: flex;
-            align-items: center;
-            padding: 80px 0;
-            gap: 40px;
-        }
-
-        .hero-text {
-            flex: 1;
-        }
-
-        .hero-text h1 {
-            font-size: 3em;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        .hero-text h1 span {
-            color: var(--cor-primaria);
-        }
-
-        .hero-text p {
-            font-size: 1.1em;
-            color: var(--cor-texto-claro);
-            margin-bottom: 30px;
-        }
-
-        .cta-button {
-            background-color: var(--cor-primaria);
-            color: var(--cor-branco);
-            padding: 15px 40px;
-            border-radius: 50px;
+        .header-button {
+            background-color: var(--azul-principal);
+            color: var(--branco);
+            padding: 10px 24px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1em;
-            transition: background-color 0.3s;
-            box-shadow: 0 4px 15px rgba(13, 71, 161, 0.3);
+            transition: background-color 0.2s;
+        }
+        .header-button:hover {
+            background-color: #2563EB;
         }
 
-        .cta-button:hover {
-            background-color: var(--cor-secundaria);
-        }
-
-        .hero-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            width: 450px;
-            border-radius: 20px;
-        }
-
-        /* --- Seção de Funcionalidades --- */
-        .features {
+        /* --- Seção Hero --- */
+        .hero {
+            background-color: var(--cinza-fundo);
             padding: 80px 0;
-            background-color: var(--cor-branco);
-        }
-        
-        .features h2 {
             text-align: center;
-            font-size: 2.5em;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--azul-escuro);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+        .hero h1 span {
+            color: var(--azul-principal);
+        }
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 32px auto;
+        }
+        .hero img {
+            max-width: 800px;
+            width: 100%;
+            margin-top: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* --- Seção "Como Funciona" --- */
+        .how-it-works {
+            padding: 80px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--azul-escuro);
             margin-bottom: 60px;
         }
-
-        .features-grid {
+        .steps-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            gap: 40px;
         }
-
-        .feature-card {
-            background-color: var(--cor-fundo);
-            padding: 40px;
-            border-radius: 15px;
+        .step-card {
             text-align: center;
-            border: 1px solid #E0E0E0;
         }
-        
-        .feature-card img {
+        .step-card .icon {
+            background-color: #DBEAFE;
+            color: var(--azul-principal);
+            width: 60px;
             height: 60px;
-            margin-bottom: 20px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        .step-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--azul-escuro);
+            margin-bottom: 12px;
         }
 
-        .feature-card h3 {
-            font-size: 1.4em;
-            margin-bottom: 15px;
+        /* --- Seção de Testemunhos --- */
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--cinza-fundo);
         }
-
-        .feature-card p {
-            color: var(--cor-texto-claro);
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        .testimonial-card {
+            background-color: var(--branco);
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid #E5E7EB;
+        }
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .testimonial-header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 16px;
+        }
+        .testimonial-header div {
+            font-weight: 600;
+        }
+        .testimonial-header .name {
+            color: var(--azul-escuro);
+        }
+        .testimonial-quote {
+            font-size: 1.1rem;
+            font-style: italic;
         }
         
         /* --- Rodapé --- */
         footer {
             padding: 40px 0;
             text-align: center;
-            color: var(--cor-texto-claro);
+            border-top: 1px solid #E5E7EB;
         }
 
         /* --- Responsividade --- */
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column-reverse;
-                text-align: center;
-            }
-            .features-grid {
+        @media (max-width: 992px) {
+            .steps-grid, .testimonials-grid {
                 grid-template-columns: 1fr;
             }
-            .nav-links {
-                display: none; /* Simplificação para mobile */
-            }
+            .nav-links { display: none; } /* Simplificando para mobile */
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
         }
+
     </style>
 </head>
 <body>
 
     <header>
         <div class="container navbar">
-            <a href="#" class="logo">PlanejaBem</a>
+            <div class="logo">PlanejaBem</div>
             <nav class="nav-links">
-                <a href="#">Como Funciona</a>
+                <a href="#">Funcionalidades</a>
                 <a href="#">Planos</a>
                 <a href="#">Contato</a>
             </nav>
+            <a href="#" class="header-button">Entrar</a>
         </div>
     </header>
 
     <main>
-        <section class="hero container">
-            <div class="hero-text">
-                <h1>A forma mais fácil de <span>organizar suas finanças</span></h1>
-                <p>Use o WhatsApp para registrar gastos, ver relatórios e atingir suas metas. Simples, inteligente e sempre à mão.</p>
-                <a href="#" class="cta-button">Comece Agora (é Grátis)</a>
-            </div>
-            <div class="hero-image">
-                <img src="https://images.pexels.com/photos/7414036/pexels-photo-7414036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Pessoa utilizando smartphone para planejamento financeiro">
+        <section class="hero">
+            <div class="container">
+                <h1>Controle suas finanças pelo <span>WhatsApp</span></h1>
+                <p>O jeito mais fácil de organizar suas despesas e receitas. Basta enviar uma mensagem, e nossa IA cuida do resto.</p>
+                <a href="#" class="header-button">Quero Testar Gratuitamente</a>
+                <img src="https://images.ctfassets.net/s3s9xmnb8g51/4AQsxap6dGFAgP6Oa4e3t1/853bd1b0d2d2a45d070b42f10b0a884e/template-hero-image-load-balancing.png" alt="Interface do app em um celular">
             </div>
         </section>
 
-        <section class="features">
+        <section class="how-it-works container">
+            <h2 class="section-title">Como funciona? É simples.</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="icon">1</div>
+                    <h3>Envie sua Despesa</h3>
+                    <p>Mande uma mensagem de texto, áudio ou a foto de um cupom fiscal para o nosso número no WhatsApp.</p>
+                </div>
+                <div class="step-card">
+                    <div class="icon">2</div>
+                    <h3>Nossa IA Organiza</h3>
+                    <p>Nossa inteligência artificial lê, categoriza e adiciona a informação ao seu controle financeiro em segundos.</p>
+                </div>
+                <div class="step-card">
+                    <div class="icon">3</div>
+                    <h3>Receba Relatórios</h3>
+                    <p>Acompanhe tudo com gráficos e relatórios simples que te ajudam a entender para onde seu dinheiro está indo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
             <div class="container">
-                <h2>Controle total na palma da sua mão</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/889/889146.png" alt="Ícone de Chat">
-                        <h3>Registro por Chat</h3>
-                        <p>Envie uma mensagem e pronto. Sua despesa ou receita é registrada na hora, sem complicação.</p>
+                <h2 class="section-title">O que nossos clientes dizem</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto do Cliente">
+                            <div>
+                                <div class="name">Ana Silva</div>
+                                <div>Empreendedora</div>
+                            </div>
+                        </div>
+                        <p class="testimonial-quote">"Finalmente uma ferramenta que entende minha rotina. Registrar gastos se tornou algo trivial e até divertido. Recomendo demais!"</p>
                     </div>
-                    <div class="feature-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920349.png" alt="Ícone de Gráfico">
-                        <h3>Relatórios Visuais</h3>
-                        <p>Entenda para onde seu dinheiro vai com gráficos claros e relatórios mensais automáticos.</p>
-                    </div>
-                    <div class="feature-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3063/3063818.png" alt="Ícone de Alerta">
-                        <h3>Alertas Inteligentes</h3>
-                        <p>Seja avisado sobre contas a vencer e receba dicas para economizar com nossa IA.</p>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do Cliente">
+                            <div>
+                                <div class="name">Marcos Rocha</div>
+                                <div>Desenvolvedor</div>
+                            </div>
+                        </div>
+                        <p class="testimonial-quote">"Eu odiava planilhas. Com o PlanejaBem, eu só converso com o bot e tudo se organiza. Mudou minha relação com o dinheiro."</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <footer>
         <div class="container">
-            <p>&copy; 2024 PlanejaBem. Feito para simplificar sua vida.</p>
+            <p>&copy; 2024 PlanejaBem. Todos os direitos reservados.</p>
         </div>
     </footer>
 
