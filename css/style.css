@@ -36,7 +36,7 @@ header {
 .logo {
     font-size: 1.5rem;
     font-weight: 800;
-    color: #1e40af;
+    color: #059669;
 }
 
 .nav-menu {
@@ -53,11 +53,11 @@ header {
 }
 
 .nav-menu a:hover {
-    color: #1e40af;
+    color: #059669;
 }
 
 .header-cta {
-    background: #1e40af;
+    background: #059669;
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
@@ -67,12 +67,12 @@ header {
 }
 
 .header-cta:hover {
-    background: #1d4ed8;
+    background: #047857;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
     padding: 4rem 0;
     text-align: center;
 }
@@ -86,7 +86,7 @@ header {
 }
 
 .hero .highlight {
-    color: #1e40af;
+    color: #059669;
 }
 
 .hero-subtitle {
@@ -99,13 +99,14 @@ header {
 }
 
 .hero-stats {
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.9);
+    border: 1px solid #bbf7d0;
     border-radius: 1rem;
     padding: 1rem 2rem;
     display: inline-block;
     margin-bottom: 2rem;
     font-weight: 600;
-    color: #1e40af;
+    color: #059669;
 }
 
 .hero-image {
@@ -117,7 +118,7 @@ header {
 }
 
 .cta-button {
-    background: #1e40af;
+    background: #059669;
     color: white;
     padding: 1rem 2rem;
     border-radius: 0.75rem;
@@ -126,13 +127,13 @@ header {
     font-size: 1.1rem;
     display: inline-block;
     transition: all 0.3s;
-    box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+    box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
 }
 
 .cta-button:hover {
-    background: #1d4ed8;
+    background: #047857;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(30, 64, 175, 0.4);
+    box-shadow: 0 8px 25px rgba(5, 150, 105, 0.4);
 }
 
 /* Features Section */
@@ -157,11 +158,11 @@ header {
 }
 
 .feature-card {
-    background: #f8fafc;
+    background: #f0fdf4;
     padding: 2rem;
     border-radius: 1rem;
     text-align: center;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #bbf7d0;
     transition: transform 0.3s;
 }
 
@@ -173,7 +174,7 @@ header {
     width: 60px;
     height: 60px;
     margin: 0 auto 1rem;
-    background: #dbeafe;
+    background: #dcfce7;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -194,7 +195,7 @@ header {
 
 /* How it Works */
 .how-it-works {
-    background: #f8fafc;
+    background: #f0fdf4;
     padding: 5rem 0;
 }
 
@@ -216,7 +217,7 @@ header {
 }
 
 .step-number {
-    background: #1e40af;
+    background: #059669;
     color: white;
     width: 40px;
     height: 40px;
@@ -253,10 +254,10 @@ header {
 }
 
 .testimonial-card {
-    background: #f8fafc;
+    background: #f0fdf4;
     padding: 2rem;
     border-radius: 1rem;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #bbf7d0;
 }
 
 .testimonial-header {
@@ -289,7 +290,7 @@ header {
 
 /* Pricing */
 .pricing {
-    background: #f8fafc;
+    background: #f0fdf4;
     padding: 5rem 0;
 }
 
@@ -305,18 +306,18 @@ header {
     background: #ffffff;
     padding: 2rem;
     border-radius: 1rem;
-    border: 2px solid #e2e8f0;
+    border: 2px solid #bbf7d0;
     text-align: center;
     position: relative;
 }
 
 .pricing-card.featured {
-    border-color: #1e40af;
+    border-color: #059669;
     transform: scale(1.05);
 }
 
 .pricing-badge {
-    background: #1e40af;
+    background: #059669;
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 2rem;
@@ -338,7 +339,7 @@ header {
 .pricing-price {
     font-size: 2rem;
     font-weight: 800;
-    color: #1e40af;
+    color: #059669;
     margin-bottom: 1rem;
 }
 
@@ -354,14 +355,14 @@ header {
 
 .pricing-features li:before {
     content: "✓";
-    color: #10b981;
+    color: #059669;
     font-weight: bold;
     margin-right: 0.5rem;
 }
 
 /* Footer */
 footer {
-    background: #1e293b;
+    background: #064e3b;
     color: #94a3b8;
     padding: 3rem 0 1rem;
 }
