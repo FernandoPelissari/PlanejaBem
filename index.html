@@ -3,275 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlanejaBem - Controle Financeiro no WhatsApp</title>
+    <title>PlanejaBem - A Maneira Mais Rápida de Organizar Suas Finanças pelo WhatsApp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --azul-principal: #3B82F6; /* Azul similar ao do GranaZen */
-            --azul-escuro: #1E3A8A;
-            --cinza-texto: #4B5563;
-            --cinza-fundo: #F9FAFB;
-            --branco: #FFFFFF;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            background-color: var(--branco);
-            color: var(--cinza-texto);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* --- Cabeçalho --- */
-        header {
-            background-color: var(--branco);
-            border-bottom: 1px solid #E5E7EB;
-            padding: 16px 0;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--azul-escuro);
-        }
-        .nav-links a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: var(--cinza-texto);
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-        .nav-links a:hover {
-            color: var(--azul-principal);
-        }
-        .header-button {
-            background-color: var(--azul-principal);
-            color: var(--branco);
-            padding: 10px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.2s;
-        }
-        .header-button:hover {
-            background-color: #2563EB;
-        }
-
-        /* --- Seção Hero --- */
-        .hero {
-            background-color: var(--cinza-fundo);
-            padding: 80px 0;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--azul-escuro);
-            line-height: 1.2;
-            margin-bottom: 16px;
-        }
-        .hero h1 span {
-            color: var(--azul-principal);
-        }
-        .hero p {
-            font-size: 1.25rem;
-            max-width: 700px;
-            margin: 0 auto 32px auto;
-        }
-        .hero img {
-            max-width: 800px;
-            width: 100%;
-            margin-top: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        /* --- Seção "Como Funciona" --- */
-        .how-it-works {
-            padding: 80px 0;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--azul-escuro);
-            margin-bottom: 60px;
-        }
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-        }
-        .step-card {
-            text-align: center;
-        }
-        .step-card .icon {
-            background-color: #DBEAFE;
-            color: var(--azul-principal);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 24px;
-        }
-        .step-card h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--azul-escuro);
-            margin-bottom: 12px;
-        }
-
-        /* --- Seção de Testemunhos --- */
-        .testimonials {
-            padding: 80px 0;
-            background-color: var(--cinza-fundo);
-        }
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-        }
-        .testimonial-card {
-            background-color: var(--branco);
-            padding: 32px;
-            border-radius: 12px;
-            border: 1px solid #E5E7EB;
-        }
-        .testimonial-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 16px;
-        }
-        .testimonial-header img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 16px;
-        }
-        .testimonial-header div {
-            font-weight: 600;
-        }
-        .testimonial-header .name {
-            color: var(--azul-escuro);
-        }
-        .testimonial-quote {
-            font-size: 1.1rem;
-            font-style: italic;
-        }
-        
-        /* --- Rodapé --- */
-        footer {
-            padding: 40px 0;
-            text-align: center;
-            border-top: 1px solid #E5E7EB;
-        }
-
-        /* --- Responsividade --- */
-        @media (max-width: 992px) {
-            .steps-grid, .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-            .nav-links { display: none; } /* Simplificando para mobile */
-            .hero h1 { font-size: 2.5rem; }
-            .hero p { font-size: 1.1rem; }
-        }
-
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+    <!-- Header -->
     <header>
-        <div class="container navbar">
-            <div class="logo">PlanejaBem</div>
-            <nav class="nav-links">
-                <a href="#">Funcionalidades</a>
-                <a href="#">Planos</a>
-                <a href="#">Contato</a>
-            </nav>
-            <a href="#" class="header-button">Entrar</a>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">PlanejaBem</div>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#funcionalidades">Funcionalidades</a></li>
+                        <li><a href="#planos">Planos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="header-cta">Começar Agora</a>
+            </div>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Controle suas finanças pelo <span>WhatsApp</span></h1>
-                <p>O jeito mais fácil de organizar suas despesas e receitas. Basta enviar uma mensagem, e nossa IA cuida do resto.</p>
-                <a href="#" class="header-button">Quero Testar Gratuitamente</a>
-                <img src="https://images.ctfassets.net/s3s9xmnb8g51/4AQsxap6dGFAgP6Oa4e3t1/853bd1b0d2d2a45d070b42f10b0a884e/template-hero-image-load-balancing.png" alt="Interface do app em um celular">
-            </div>
-        </section>
-
-        <section class="how-it-works container">
-            <h2 class="section-title">Como funciona? É simples.</h2>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="icon">1</div>
-                    <h3>Envie sua Despesa</h3>
-                    <p>Mande uma mensagem de texto, áudio ou a foto de um cupom fiscal para o nosso número no WhatsApp.</p>
-                </div>
-                <div class="step-card">
-                    <div class="icon">2</div>
-                    <h3>Nossa IA Organiza</h3>
-                    <p>Nossa inteligência artificial lê, categoriza e adiciona a informação ao seu controle financeiro em segundos.</p>
-                </div>
-                <div class="step-card">
-                    <div class="icon">3</div>
-                    <h3>Receba Relatórios</h3>
-                    <p>Acompanhe tudo com gráficos e relatórios simples que te ajudam a entender para onde seu dinheiro está indo.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="testimonials">
-            <div class="container">
-                <h2 class="section-title">O que nossos clientes dizem</h2>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto do Cliente">
-                            <div>
-                                <div class="name">Ana Silva</div>
-                                <div>Empreendedora</div>
-                            </div>
-                        </div>
-                        <p class="testimonial-quote">"Finalmente uma ferramenta que entende minha rotina. Registrar gastos se tornou algo trivial e até divertido. Recomendo demais!"</p>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do Cliente">
-                            <div>
-                                <div class="name">Marcos Rocha</div>
-                                <div>Desenvolvedor</div>
-                            </div>
-                        </div>
-                        <p class="testimonial-quote">"Eu odiava planilhas. Com o PlanejaBem, eu só converso com o bot e tudo se organiza. Mudou minha relação com o dinheiro."</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <p>&copy; 2024 PlanejaBem. Todos os direitos reservados.</p>
+            <div class="hero-stats">+21 mil pessoas que confiaram no PlanejaBem para organizar suas finanças. Sua vez chegou!</div>
+            <h1>A Maneira Mais Rápida de Organizar Suas <span class="highlight">Finanças pelo WhatsApp</span></h1>
+            <p class="hero-subtitle">Controle despesas, receitas e metas com a simplicidade de uma conversa. Nossa inteligência artificial categoriza automaticamente seus gastos.</p>
+            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Celular com WhatsApp" class="hero-image">
+            <br><br>
+            <a href="#" class="cta-button">Experimente PlanejaBem Gratuitamente</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="funcionalidades">
+        <div class="container">
+            <h2 class="section-title">Visualize Suas Finanças De Forma Inteligente</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Registrar gastos ficou fácil!</h3>
+                    <p>Envie uma mensagem no WhatsApp e pronto: suas despesas e receitas são adicionadas sem complicação.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎤</div>
+                    <h3>Adicione gastos por áudio ou foto!</h3>
+                    <p>Sem tempo para digitar? Gaste, fotografe ou grave um áudio! O PlanejaBem cuida do registro para você, onde estiver.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Nunca mais perca um vencimento!</h3>
+                    <p>O PlanejaBem te lembra automaticamente dos seus pagamentos. Só dizer o valor, descrição e data, e pronto!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Entenda para onde vai seu dinheiro!</h3>
+                    <p>Saiba exatamente para onde seu dinheiro vai! Nossa IA categoriza tudo, revelando claramente a saúde das suas finanças.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Visão Compartilhada das Finanças</h3>
+                    <p>Gerenciem as finanças juntos, com total transparência! Todos têm acesso a relatórios e gráficos atualizados.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Seus dados sempre seguros!</h3>
+                    <p>O PlanejaBem garante máxima segurança e privacidade para suas informações financeiras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Como Funciona a Integração com WhatsApp</h2>
+            <div class="steps-container">
+                <div>
+                    <ol class="steps-list">
+                        <li class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Envie uma Mensagem</h4>
+                                <p>Simplesmente envie uma mensagem para o PlanejaBem no WhatsApp com seus gastos ou receitas.</p>
+                            </div>
+                        </li>
+                        <li class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>IA Processa a Informação</h4>
+                                <p>Nossa IA analisa sua mensagem e categoriza automaticamente a transação.</p>
+                            </div>
+                        </li>
+                        <li class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Atualização Automática</h4>
+                                <p>Seus dados financeiros são atualizados instantaneamente no sistema.</p>
+                            </div>
+                        </li>
+                        <li class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Confirmação Imediata</h4>
+                                <p>Receba uma confirmação instantânea de que sua transação foi registrada.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Como funciona" style="width: 100%; border-radius: 1rem;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">O que Nossos Usuários Dizem</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jéssica Caroline" class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-name">Jéssica Caroline</div>
+                            <div class="testimonial-role">Engenheira de Dados Sênior</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-quote">O PlanejaBem revolucionou a forma como gerencio as finanças do meu negócio. É simples, rápido e muito eficiente!</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Eduardo Alves" class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-name">Eduardo Alves</div>
+                            <div class="testimonial-role">Estagiário</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-quote">Eu costumava esquecer de registrar meus gastos, mas com o PlanejaBem, consigo adicionar tudo direto pelo WhatsApp enquanto estou na rua.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Kesia Bizerra" class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-name">Kesia Bizerra</div>
+                            <div class="testimonial-role">Estudante de Direito</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-quote">Ótimo sistema, facilita muito no controle de gastos!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="planos">
+        <div class="container">
+            <h2 class="section-title">Escolha o Plano Ideal para Você</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="pricing-title">Premium</h3>
+                    <div class="pricing-price">R\$ 17,99<span style="font-size: 1rem; color: #64748b;">/mês</span></div>
+                    <ul class="pricing-features">
+                        <li>Sistema web com gráficos interativos</li>
+                        <li>Controle de gastos via WhatsApp</li>
+                        <li>Transações ilimitadas</li>
+                        <li>Categorias personalizadas</li>
+                        <li>Suporte via WhatsApp</li>
+                        <li>Até 3 contas bancárias</li>
+                        <li>Lembretes de vencimento</li>
+                    </ul>
+                    <a href="#" class="cta-button">Seja Premium</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">MAIS POPULAR</div>
+                    <h3 class="pricing-title">Zen</h3>
+                    <div class="pricing-price">R\$ 27,92<span style="font-size: 1rem; color: #64748b;">/mês</span></div>
+                    <ul class="pricing-features">
+                        <li>Todos os recursos do Premium</li>
+                        <li>Contas bancárias ilimitadas</li>
+                        <li>Gestão Compartilhada</li>
+                        <li>Ideal para casais e famílias</li>
+                        <li>Cada membro usa seu WhatsApp</li>
+                        <li>Visualização centralizada</li>
+                        <li>Suporte por ligação</li>
+                        <li>Exportação de dados</li>
+                    </ul>
+                    <a href="#" class="cta-button">Seja Zen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Contato</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <p>&copy; 2024 PlanejaBem. Todos os direitos reservados.</p>
+                <p>Transforme sua gestão financeira!</p>
+            </div>
         </div>
     </footer>
-
 </body>
 </html>
