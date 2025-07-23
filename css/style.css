@@ -376,7 +376,7 @@ header {
 /* Footer */
 footer {
   background: #064e3b;
-  color: #94a3b8;
+  color: #ffffff;
   padding: 3rem 0 1rem;
 }
 
@@ -392,13 +392,13 @@ footer {
 }
 
 .footer-links a {
-  color: #94a3b8;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-links a:hover {
-  color: #ffffff;
+  color: #94a3b8;
 }
 
 /* Responsive */
