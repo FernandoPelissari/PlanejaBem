@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato - PlanejaBem</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Reaproveita o cabeçalho -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <img src="img/icone_planeja_bem_sem_fundo_peq.png" alt="PlanejaBem Logo" style="height: 40px; margin-bottom: 6px;" />
+          <span>PlanejaBem</span>
+        </div>
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html#recursos">Recursos</a></li>
+            <li><a href="index.html#planos">Planos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+        <a href="https://painel.planejabem.app" class="header-cta">Teste Grátis</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Formulário de Contato -->
+  <section class="contact-section">
+    <div class="container">
+      <h2>Entre em Contato</h2>
+      <form action="enviar-contato.php" method="POST" enctype="multipart/form-data" class="contact-form">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="assunto">Assunto:</label>
+        <input type="text" id="assunto" name="assunto" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+        <label for="anexo">Anexar Imagem (opcional):</label>
+        <input type="file" id="anexo" name="anexo" accept="image/*">
+
+        <button type="submit" class="cta-button">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="https://www.planejabem.app/termos-e-privacidade.html">Termos de Uso e Privacidade</a>
+        </div>
+        <p>&copy; 2025 PlanejaBem. Todos os direitos reservados.</p>
+        <p style="font-weight: bold; font-size: 16px;">
+          <a href="https://www.instagram.com/planejabem.app" target="_blank" style="color: white; text-decoration: none;">
+            <i class="fab fa-instagram" style="color: white; margin-right: 6px;"></i> @planejabem.app
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
