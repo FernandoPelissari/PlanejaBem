@@ -716,7 +716,48 @@ header {
   align-items: stretch;
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 420px));
+  justify-content: center;
+}
+
+.billing-toggle {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  display: inline-flex;
+  gap: 4px;
+  margin-top: 28px;
+  padding: 5px;
+}
+
+.billing-option {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  color: #c4d1df;
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 900;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 16px;
+}
+
+.billing-option.active {
+  background: linear-gradient(135deg, var(--brand), #19b7b4);
+  box-shadow: 0 12px 28px rgba(40, 211, 145, 0.22);
+  color: #ffffff;
+}
+
+.billing-option span {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  padding: 3px 7px;
 }
 
 .pricing-card {
@@ -760,11 +801,19 @@ header {
   padding-right: 24px;
 }
 
+.pricing-original {
+  color: #8ea2b7;
+  font-size: 0.95rem;
+  font-weight: 800;
+  min-height: 23px;
+  text-decoration: line-through;
+}
+
 .pricing-price {
   color: var(--brand);
   font-size: 2.25rem;
   font-weight: 900;
-  margin: 18px 0 20px;
+  margin: 6px 0 6px;
 }
 
 .pricing-price span {
@@ -772,6 +821,21 @@ header {
   font-size: 0.95rem;
   font-weight: 800;
   margin-left: 4px;
+}
+
+.pricing-note {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.pricing-card.annual-active {
+  border-color: rgba(88, 166, 255, 0.34);
+}
+
+.pricing-card.annual-active.featured {
+  border-color: rgba(40, 211, 145, 0.56);
 }
 
 .pricing-features {
