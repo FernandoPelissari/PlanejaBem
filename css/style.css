@@ -934,18 +934,19 @@ footer {
 
 .footer-social {
   align-items: center;
-  border-radius: 50%;
   color: #d9e4ee;
   display: inline-flex;
-  font-size: 22px;
-  height: 40px;
-  justify-content: center;
-  transition: color 0.2s, background 0.2s;
-  width: 40px;
+  font-weight: 700;
+  gap: 8px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-social i {
+  font-size: 20px;
 }
 
 .footer-social:hover {
-  background: rgba(255, 255, 255, 0.08);
   color: #ffffff;
 }
 
