@@ -430,6 +430,7 @@
             '[data-target="original-price"]',
           );
           const noteElement = card.querySelector('[data-target="price-note"]');
+          const linkElement = card.querySelector('[data-target="link"]');
 
           if (!priceElement || !originalElement || !noteElement) return;
 
@@ -438,6 +439,9 @@
             originalElement.textContent = `De R$ ${card.dataset.yearlyOriginal}`;
             noteElement.textContent = "Pagamento anual";
             card.classList.add("annual-active");
+            if (linkElement && card.dataset.yearlyUrl) {
+              linkElement.href = card.dataset.yearlyUrl;
+            }
             return;
           }
 
@@ -445,6 +449,9 @@
           originalElement.textContent = "";
           noteElement.textContent = "Cobrança mensal";
           card.classList.remove("annual-active");
+          if (linkElement && card.dataset.monthlyUrl) {
+            linkElement.href = card.dataset.monthlyUrl;
+          }
         });
       }
 
@@ -459,23 +466,34 @@
             const card = document.querySelector(
               `.pricing-card[data-plan="${plan.name}"]`,
             );
-            if (card) {
-              const priceElement = card.querySelector('[data-target="price"]');
-              const linkElement = card.querySelector('[data-target="link"]');
+            if (!card) return;
 
-              if (priceElement && activeBilling === "monthly") {
-                const formattedPrice = plan.price.replace(".", ",");
-                if (plan.name !== "Premium") {
-                  card.dataset.monthlyPrice = formattedPrice;
-                  priceElement.innerHTML = `R$ ${formattedPrice}<span>/mês</span>`;
-                }
-              }
+            const priceElement = card.querySelector('[data-target="price"]');
 
-              if (linkElement && plan.asaas_payment_link_url) {
-                linkElement.href = plan.asaas_payment_link_url;
-              }
+            // Atualizar preços mensais e anuais nos data-attributes
+            if (plan.price) {
+              card.dataset.monthlyPrice = plan.price.replace(".", ",");
+            }
+            if (plan.price_yearly) {
+              const yearlyFormatted = plan.price_yearly.replace(".", ",");
+              card.dataset.yearlyPrice = yearlyFormatted;
+              const yearlyOriginal = (parseFloat(plan.price) * 12)
+                .toFixed(2)
+                .replace(".", ",");
+              card.dataset.yearlyOriginal = yearlyOriginal;
+            }
+
+            // Armazenar URLs por ciclo
+            if (plan.asaas_payment_link_monthly_url) {
+              card.dataset.monthlyUrl = plan.asaas_payment_link_monthly_url;
+            }
+            if (plan.asaas_payment_link_yearly_url) {
+              card.dataset.yearlyUrl = plan.asaas_payment_link_yearly_url;
             }
           });
+
+          // Atualizar display e links com os dados carregados
+          updateBillingDisplay();
         } catch (error) {
           console.error("Erro ao atualizar preços:", error);
         }
