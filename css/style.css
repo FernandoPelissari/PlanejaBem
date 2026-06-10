@@ -1247,10 +1247,6 @@ footer {
     padding: 64px 0;
   }
 
-  .step-item {
-    flex-direction: column;
-  }
-
   .footer-content {
     align-items: flex-start;
     flex-direction: column;
